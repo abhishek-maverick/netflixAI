@@ -1,5 +1,7 @@
+import Body from "./components/Body";
+
 const App = () => {
-  return <div className="text-3xl text-green-800"> Netflix AI</div>;
+  return <Body />;
 };
 
 export default App;
