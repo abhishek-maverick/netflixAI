@@ -5,6 +5,13 @@ export const USER_AVATAR =
   "https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e";
 
 export const API_URL = "https://api.themoviedb.org/3/movie/now_playing?page=1";
+export const POPULAR_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/popular?page=1";
+export const TOP_RATED_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/top_rated?page=1";
+
+export const UPCOMING_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/upcoming?page=1";
 
 export const API_TRAILER_URL = (movieId) =>
   `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
