@@ -16,6 +16,9 @@ export const UPCOMING_MOVIES_URL =
 export const API_TRAILER_URL = (movieId) =>
   `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
 
+export const SEARCH_MOVIE_URL = (movie) =>
+  `https://api.themoviedb.org/3/search/movie?query=${movie}&include_adult=false&language=en-US&page=1`;
+
 export const API_OPTIONS = {
   method: "GET",
   headers: {
@@ -35,3 +38,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPENAI_KEY = "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";
