@@ -1,12 +1,14 @@
 import { useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS, SEARCH_MOVIE_URL } from "../utils/constants";
+import { addGptMovieResults } from "../utils/gptSlice";
 import lang from "../utils/languageConstants";
 import openai from "../utils/openai";
 
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
+  const dispatch = useDispatch();
 
   // search movie in TMDB
 
@@ -37,6 +39,7 @@ const GptSearchBar = () => {
     const tmdbResults = await Promise.all(promiseArray);
     // add filter to remove duplicate movies with independent genre
     console.log(tmdbResults);
+    dispatch(addGptMovieResults({ movieNames: gptMovies, tmdbResults }));
   };
   return (
     <div className="pt-[8%] flex justify-center">
