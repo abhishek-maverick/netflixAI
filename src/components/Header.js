@@ -60,8 +60,8 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between">
-      <img src={LOGO} alt="logo" className="w-52" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex md:flex-row flex-col justify-between ">
+      <img src={LOGO} alt="logo" className="w-52 mx-auto md:mx-0" />
       {user && (
         <div className="flex p-2">
           {showGptSearch && (
